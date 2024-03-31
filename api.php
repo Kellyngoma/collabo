@@ -16,7 +16,7 @@ if(!empty($_GET['id'])) {
         }
 
         $result = [
-            'status' => 'sucess',
+            'status' => 'success',
             'data' => [
                 'patient' => $patient,
                 'consultations' => $consultations
