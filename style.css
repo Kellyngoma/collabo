@@ -1,0 +1,103 @@
+@import url("https/fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Popping", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background: url("outl_2.jpg");
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+}
+.content_patient
+{
+    width: 70%;
+    background:transparent;
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 0 10px rgb(0,0,0, .1);
+    border-radius: 5px;
+    color: #fff;
+    padding: 30px 40px ;
+    text-align: center;
+    margin-left: 6%;
+    margin-top: 10px;
+    background: #51b88d;
+
+}
+.content_consultation, .content_prescription
+{
+    width: 70%;
+    background:transparent;
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 0 10px rgb(0,0,0, .1);
+    border-radius: 5px;
+    color: #fff;
+    padding: 30px 40px ;
+    text-align: center;
+    margin-left: -5%;
+    margin-top: -5%;
+}
+
+.content_message
+{
+    font-size: 34px;
+    margin-left: 2%;
+    color:#fff;
+}
+.input_box
+{
+    width: 70%;
+    height: 50px;
+    margin: 30px 0;
+
+}
+ input
+{
+    
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 15px;
+}
+input::placeholder{
+    color: #fff;
+}
+.input_btn
+{
+    width: 70%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 40px;
+    font-size: 16px; 
+    padding: 2px 15px; 
+    font-weight: bold;
+}
+i{
+    position: absolute;
+    margin-left: -50px!important;
+    margin-top: 55px; 
+    transform: translateY(-50%);
+    font-size: 16px !important;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.input_btn:hover{
+    background-color: #fff;
+    color: rgb(88, 159, 171);
+}
