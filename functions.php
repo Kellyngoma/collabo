@@ -96,6 +96,7 @@ function suppressionPatient(int $id): bool{
  * @return bool
  */
 function addPatient(string $nom, $postnom, $adresse, $genre, $poids, $idUser, string $idInterSys = null): bool {
+    // die(var_dump($nom, $postnom, $adresse, $genre, $poids, $idUser, $idInterSys));
     $sql = "INSERT INTO patients (nom_pat,postnom_pat,adresse,genre_pat,poids_pat,id_inter_sys,id_user) VALUES
     (?, ?, ?, ?, ?, ?, ?)";
 
