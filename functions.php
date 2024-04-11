@@ -1,5 +1,6 @@
 <?php
-const APP_DATA_PREFIX = 'app1';
+
+include_once 'config.php';
 
 function auth() {
     return  $_SESSION['user'];
@@ -8,7 +9,7 @@ function auth() {
 // CONNEXION A LA BD
 function db(): PDO {
     try {
-        return new PDO('mysql:host=localhost;dbname=app_hosto', 'root', '' );
+        return new PDO('mysql:host='.DBHOST.';dbname='.DBNAME, 'root', '' );
     } catch(Exception $e) {
         die('error:' .$e->getmessage());
     }

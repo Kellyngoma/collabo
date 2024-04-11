@@ -2,7 +2,6 @@
   session_start();
 
   include_once 'functions.php';
-  include_once 'config.php';
 
   if(!empty($_POST['id_patient'])){
 
