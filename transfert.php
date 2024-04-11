@@ -20,34 +20,35 @@
 
     if(!empty($data['status']) && $data['status'] == 'success') {
       $patient = $data['data']['patient'];
+      // die(var_dump($patient['id_inter_sys']));
       $consultations = $data['data']['consultations'];
-      $patient_ = getOnePatient($patient['id_user']);
+      $patient_ = getOnePatient($patient['id_inter_sys']);
       if (!$patient_ instanceof StdClass) {
-          // addPatient(
-          //   $patient['nom_pat'], $patient['postnom_pat'], 
-          //   $patient['adresse'], $patient['genre_pat'], 
-          //   $patient['poids_pat'], $patient['id_user'], 
-          //   $patient['id_inter_sys']
-          // );
+          addPatient(
+            $patient['nom_pat'], $patient['postnom_pat'], 
+            $patient['adresse'], $patient['genre_pat'], 
+            $patient['poids_pat'], $patient['id_user'], 
+            $patient['id_inter_sys']
+          );
           
           foreach($consultations as $consultation) {
-            // addConsult(
-            //   $consultation['title'], $consultation['motif'],
-            //   $consultation['date_consult'], $consultation['identityPatient'],
-            //   $consultation['idUser'], $consultation['idInterSys ']
-            // );
-            die(var_dump($consultation['prescriptions']));
+            addConsult(
+              $consultation['nom_consult'], $consultation['motif_consult'],
+              $consultation['date_consult'], $consultation['id_pat'],
+              $consultation['id_user'], $consultation['id_inter_sys']
+            );
+            
             foreach($consultation['prescriptions'] as $prescription) {
               addPrescri(
-                $prescription['title'],$prescription['libelle'],
-                $prescription['datePrescri'],$prescription['id_consult'],
-                $prescription['idInterSys']
+                $prescription['nom_prescrip'],$prescription['libelle_prescrip'],
+                $prescription['date_prescript'],$prescription['id_consult'],
+                $prescription['id_inter_sys']
               );
             }
           }
     
           header('location: index.php?action=patient&id='.$patient->id_inter_sys);
-      }
+      }      
     }
 
     header('location: index.php?action=patients');

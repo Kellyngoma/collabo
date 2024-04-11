@@ -20,6 +20,7 @@ if(
 <div class="">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Enregistrer un patient </button>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalxy"> Demander un transfert </button>
+    <?php if(!empty($_GET['message'])) echo $_GET['message']; ?>
     <table class="table" id="datatable">
         <thead>
          <tr>
