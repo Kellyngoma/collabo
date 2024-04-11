@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS prescription(
 -- Inssertion categorie
 INSERT INTO categorie_user(id,nom,grade,fonction,adresse) VALUES(null,'agent', 'médecin directeur', 'pédiatre', 'Nzuzi n°15 lemba');
 -- Admin inssertion password=admin
-INSERT INTO user(id, nom, email,password,role, id_cate) VALUES(null, "kienge", 'kienge@gmail.com', '$2y$10$stdpDRzwS3t5wXa2UCNq7.Ubw/Mz9DLzrAseLDMhP/tdSUomHgKR.', 'admin', 1);
+INSERT INTO user(id, nom, email,password,role, id_cate) VALUES(null, "kienge", 'kienge@gmail.com', '$2y$10$jpIgKCUIlsDFXdy2Qr4Q5.8ApY1HcdIApCvGCkkCs.Fe8TlJZeKE.', 'admin', 1);
 
 
 

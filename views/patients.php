@@ -74,7 +74,7 @@ if(
         <button type="submit" class="btn btn-primary">Envoyer</button>
       </div>
 </form>
-  </div>
+</div>
 </div>
 
 <div class="modal" tabindex="-1" role="dialog" id="exampleModalxy">

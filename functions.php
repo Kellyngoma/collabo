@@ -147,7 +147,7 @@ function userLogin($email, $password) {
         return false;
     }
 
-    /* cette ligne vérifie si le mot de passe saisi correspond au mot de passe qui envoyé dans la table user
+    /* cette ligne vérifie si le mot de passe saisi correspond au mot de passe qui est envoyé dans la table user
     en suite elle affiche l'email et le nom de l'internaute
     */
     if(true == password_verify($password, $user->password)) {

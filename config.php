@@ -1,4 +1,4 @@
 <?php
 $config = [
-    'url' => null
+    'url' => 'http://app.local/api.php?id='
 ];

@@ -26,8 +26,8 @@
       addPatient(
         $patient['nom_pat'], $patient['postnom_pat'], 
         $patient['adresse'], $patient['genre_pat'], 
-        $patient['poids_pat'], $patient['id_inter_sys'], 
-        $patient['id_user']
+        $patient['poids_pat'], $patient['id_user'], 
+        $patient['id_inter_sys']
       );
 
       foreach($consultations as $consultation) {
