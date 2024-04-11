@@ -36,7 +36,7 @@ if(
      $email = auth()['email'];
      $loggedUser = getUser( $email);
      
-     addPrescri($title,$libelle,$datePrescri,$id_consult,$loggedUser->id);
+     addPrescri($title,$libelle,$datePrescri,$id_consult);
 
      $patient = getOnePatient($id);
 

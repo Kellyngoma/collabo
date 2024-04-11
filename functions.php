@@ -127,7 +127,7 @@ function addConsult(string $title, $motif, $date_consult, $identityPatient, $idU
 function addPrescri(string $title, string $libelle, $datePrescri, string $id_consult, string $idInterSys = null): bool{
     $sql = "INSERT INTO  prescription (nom_prescrip,libelle_prescrip,date_prescript,id_consult,id_inter_sys) VALUES 
     (?, ?, ?, ?, ?)";
- 
+
     if(null === $idInterSys) $idInterSys = getUniqueId();
     $query = db()->prepare($sql);
     $query->execute([$title, $libelle, $datePrescri, $id_consult,  $idInterSys]);

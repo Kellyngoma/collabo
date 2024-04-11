@@ -21,23 +21,22 @@
     if(!empty($data['status']) && $data['status'] == 'success') {
       $patient = $data['data']['patient'];
       $consultations = $data['data']['consultations'];
-      $patient = getOnePatient($patient['id_user']);
-      
-      if (null === $patient) {
-          addPatient(
-            $patient['nom_pat'], $patient['postnom_pat'], 
-            $patient['adresse'], $patient['genre_pat'], 
-            $patient['poids_pat'], $patient['id_user'], 
-            $patient['id_inter_sys']
-          );
-    
+      $patient_ = getOnePatient($patient['id_user']);
+      if (!$patient_ instanceof StdClass) {
+          // addPatient(
+          //   $patient['nom_pat'], $patient['postnom_pat'], 
+          //   $patient['adresse'], $patient['genre_pat'], 
+          //   $patient['poids_pat'], $patient['id_user'], 
+          //   $patient['id_inter_sys']
+          // );
+          
           foreach($consultations as $consultation) {
-            addConsult(
-              $consultation['title'], $consultation['motif'],
-              $consultation['date_consult'], $consultation['identityPatient'],
-              $consultation['idUser'], $consultation['idInterSys ']
-            );
-            
+            // addConsult(
+            //   $consultation['title'], $consultation['motif'],
+            //   $consultation['date_consult'], $consultation['identityPatient'],
+            //   $consultation['idUser'], $consultation['idInterSys ']
+            // );
+            die(var_dump($consultation['prescriptions']));
             foreach($consultation['prescriptions'] as $prescription) {
               addPrescri(
                 $prescription['title'],$prescription['libelle'],
